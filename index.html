@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Echo Falls &amp; the Lake Above — A Sea to Sky Trails Entry</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A field guide entry on Echo Falls and Echo Lake, west bank of the Squamish River. The waterfall is the headliner; the lake is the bonus. Honest logistics on the river crossing, tide timing, and the two ways across.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f1ea;
+    --paper-deep: #ece6db;
+    --ink: #1c1917;
+    --ink-soft: #3f3a33;
+    --ink-mute: #7a7268;
+    --rule: #cdc6b8;
+    --moss: #2b3a2b;
+    --rust: #8a4a2c;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(28,25,23,0.025) 1px, transparent 1px);
+    background-size: 3px 3px;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  ::selection { background: var(--ink); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--ink); }
+
+  h1, h2, h3, h4, .display {
+    font-family: "Fraunces", "Times New Roman", serif;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 { font-size: clamp(3.25rem, 8.8vw, 7rem); font-weight: 400; letter-spacing: -0.028em; }
+  h2 { font-size: clamp(2.15rem, 4.8vw, 3.5rem); font-weight: 400; letter-spacing: -0.025em; }
+  h3 { font-size: 1.55rem; font-weight: 500; line-height: 1.22; letter-spacing: -0.012em; }
+
+  em, .italic { font-style: italic; font-weight: 400; }
+
+  p { margin: 0 0 1.15rem; color: var(--ink-soft); font-size: 1.075rem; line-height: 1.72; }
+  p.lead {
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 2.25rem; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 2.25rem; }
+
+  /* ---------- LINE LABELS ---------- */
+  .eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-mute);
+    display: inline-flex; align-items: center; gap: 0.8rem;
+  }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--ink-mute);
+  }
+  .roman {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-mute);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- NAV ---------- */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,241,234,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav.top .inner {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 2.25rem;
+  }
+  .mark {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-family: "Fraunces", serif;
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--ink);
+    border: none;
+  }
+  .mark svg { color: var(--ink); }
+  .mark-text { line-height: 1; }
+  .mark-text small { display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); margin-top: 0.15rem; }
+  nav.top .links { display: flex; gap: 2rem; }
+  nav.top .links a {
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    color: var(--ink-soft);
+  }
+  nav.top .links a:hover { color: var(--ink); }
+  @media (max-width: 680px) {
+    nav.top .links { display: none; }
+  }
+
+  /* ---------- COORD RIBBON ---------- */
+  .coords {
+    background: var(--paper-deep);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Inter", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-mute);
+    padding: 0.55rem 0;
+  }
+  .coords .inner {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; justify-content: space-between; gap: 2rem;
+    padding: 0 2.25rem; flex-wrap: wrap;
+  }
+  .coords span + span { color: var(--ink-soft); }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero .wrap { position: relative; z-index: 2; }
+  header.hero .eyebrow { margin-bottom: 2.5rem; }
+  header.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      radial-gradient(ellipse 800px 240px at 50% 60%, transparent 30%, rgba(28,25,23,0.04) 31%, transparent 32%),
+      radial-gradient(ellipse 1000px 300px at 50% 60%, transparent 35%, rgba(28,25,23,0.03) 36%, transparent 37%),
+      radial-gradient(ellipse 1200px 360px at 50% 60%, transparent 40%, rgba(28,25,23,0.025) 41%, transparent 42%),
+      radial-gradient(ellipse 1400px 420px at 50% 60%, transparent 45%, rgba(28,25,23,0.02) 46%, transparent 47%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 4.5rem;
+    align-items: start;
+  }
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+  header.hero h1 {
+    max-width: 12ch;
+    margin-bottom: 1.25rem;
+  }
+  header.hero h1 em { color: var(--moss); display: block; font-size: 0.5em; font-weight: 300; margin-top: 0.55rem; letter-spacing: -0.018em; }
+  header.hero .deck {
+    max-width: 52ch;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 2.5rem;
+  }
+
+  /* hero waterfall art block */
+  .hero-art {
+    aspect-ratio: 3/4;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    display: grid; place-items: center;
+    color: var(--ink-soft);
+    padding: 1.25rem;
+    position: relative;
+  }
+  .hero-art svg { width: 100%; height: 100%; }
+  .hero-art .plate {
+    position: absolute;
+    bottom: 0.9rem; left: 0.9rem; right: 0.9rem;
+    display: flex; justify-content: space-between;
+    font-family: "Inter", sans-serif;
+    font-size: 0.6rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-mute);
+    font-weight: 500;
+  }
+
+  /* meta strip */
+  header.hero .meta {
+    display: flex; flex-wrap: wrap; gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  header.hero .meta .item .label {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  header.hero .meta .item .value {
+    font-family: "Fraunces", serif; font-weight: 400; font-size: 1.05rem;
+    color: var(--ink);
+  }
+  header.hero .meta .item .value em { color: var(--moss); }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 6.5rem 0; position: relative; }
+  section.tight { padding: 4.5rem 0; }
+  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+
+  .section-head { max-width: 720px; margin-bottom: 3.5rem; }
+  .section-head .eyebrow { margin-bottom: 1.5rem; }
+  .section-head h2 { margin-bottom: 1.25rem; }
+
+  /* ---------- BODY GRID (manifesto-like) ---------- */
+  .body-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+  }
+  @media (max-width: 900px) { .body-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .body-art {
+    aspect-ratio: 4/5;
+    background: var(--paper-deep);
+    display: grid; place-items: center;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .body-art svg { width: 72%; max-width: 290px; height: auto; }
+  .body-copy p:first-of-type::first-letter {
+    font-family: "Fraunces", serif;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 0.85;
+    float: left;
+    padding: 0.4rem 0.7rem 0 0;
+    color: var(--ink);
+  }
+  blockquote.pull {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 300;
+  }
+  blockquote.pull cite {
+    display: block; margin-top: 1rem;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+  }
+
+  /* ---------- CATCH (narrow editorial) ---------- */
+  .catch { background: var(--paper-deep); }
+  .catch .section-head { margin-bottom: 2rem; }
+  .catch-prose { max-width: 62ch; }
+  .catch-prose p { font-size: 1.1rem; }
+  .tide-row {
+    display: flex; align-items: center; gap: 1rem;
+    margin: 2.5rem 0 0;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+  .tide-row svg { flex-shrink: 0; color: var(--moss); }
+
+  /* ---------- TWO WAYS ACROSS ---------- */
+  .ways-grid {
+    display: grid; grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+  @media (max-width: 900px) {
+    .ways-grid { grid-template-columns: 1fr; gap: 0; }
+    .ways-divider { display: none; }
+    .way { border-bottom: 1px solid var(--rule); padding: 3rem 0; }
+    .way:last-child { border-bottom: none; }
+  }
+  .ways-divider { background: var(--rule); }
+  .way {
+    padding: 1rem 3rem 1rem 0;
+  }
+  .way + .ways-divider + .way { padding: 1rem 0 1rem 3rem; }
+  @media (max-width: 900px) {
+    .way, .way + .ways-divider + .way { padding: 3rem 0; }
+  }
+  .way .roman { display: block; margin-bottom: 1rem; }
+  .way h3 { margin-bottom: 0.4rem; }
+  .way .sub {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .way ul.spec {
+    list-style: none; padding: 0; margin: 1.5rem 0;
+  }
+  .way ul.spec li {
+    display: grid; grid-template-columns: 11ch 1fr; gap: 1.25rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.97rem;
+  }
+  .way ul.spec li:last-child { border-bottom: 1px solid var(--rule); }
+  .way ul.spec .lbl {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500; padding-top: 0.15rem;
+  }
+  .way ul.spec .val {
+    font-family: "Fraunces", serif; color: var(--ink); font-weight: 400;
+  }
+  .way ul.spec .val em { color: var(--moss); }
+  .way .mark-art {
+    height: 70px; margin-bottom: 1.25rem;
+    display: flex; align-items: flex-end;
+    color: var(--ink-soft);
+  }
+  .way .mark-art svg { height: 100%; width: auto; }
+
+  .pillish {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 500; color: var(--ink);
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .pillish:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .pillish.moss { border-color: var(--moss); color: var(--moss); }
+  .pillish.moss:hover { background: var(--moss); color: var(--paper); border-color: var(--moss); }
+
+  /* ---------- LOGISTICS ---------- */
+  .logistics { background: var(--paper-deep); }
+  .map-list { display: flex; flex-direction: column; }
+  .map-row {
+    display: grid; grid-template-columns: 80px 1fr auto 200px;
+    align-items: center; gap: 2.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .map-row:last-child { border-bottom: 1px solid var(--rule); }
+  .map-row .num {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-mute);
+  }
+  .map-row .title h3 { margin-bottom: 0.45rem; }
+  .map-row .title .sub {
+    font-size: 0.95rem; color: var(--ink-soft); font-weight: 400;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+  }
+  .map-row .pinlink {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--moss); font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.3rem;
+  }
+  .map-row .pinlink:hover { border-bottom-color: var(--moss); }
+  .map-row .markart {
+    height: 60px;
+    display: grid; place-items: center;
+    color: var(--ink-soft);
+    opacity: 0.75;
+  }
+  .map-row .markart svg { max-height: 60px; width: auto; }
+  @media (max-width: 900px) {
+    .map-row {
+      grid-template-columns: 40px 1fr;
+      gap: 1.25rem;
+    }
+    .map-row .markart { display: none; }
+    .map-row .pinlink { grid-column: 1 / -1; padding-left: 56px; padding-top: 0.5rem; }
+  }
+
+  /* ---------- TIPS CALLOUTS ---------- */
+  .tips {
+    margin-top: 4.5rem;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  @media (max-width: 760px) { .tips { grid-template-columns: 1fr; } }
+  .tip {
+    padding: 2rem 2rem 2rem 2rem;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .tip .tipmark {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--rust); font-weight: 600;
+  }
+  .tip .tipmark svg { color: var(--rust); flex-shrink: 0; }
+  .tip p {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  /* ---------- HIKE NARRATIVE ---------- */
+  .hike-grid {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 5rem; align-items: start;
+  }
+  @media (max-width: 900px) { .hike-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .hike-art {
+    aspect-ratio: 4/5;
+    background: var(--paper-deep);
+    display: grid; place-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-soft);
+  }
+  .hike-art svg { width: 78%; }
+
+  /* ---------- WHEN TO GO ---------- */
+  .when { background: var(--paper-deep); }
+  .when-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  @media (max-width: 860px) { .when-grid { grid-template-columns: 1fr; } }
+  .when-item {
+    padding: 2.25rem;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .when-item .roman { display: block; margin-bottom: 1rem; }
+  .when-item h3 { margin-bottom: 0.75rem; font-family: "Fraunces", serif; font-weight: 400; font-size: 1.4rem; letter-spacing: -0.01em; }
+  .when-item p { font-size: 0.99rem; margin: 0; }
+
+  /* ---------- HONEST TALK ---------- */
+  .honest-list { list-style: none; padding: 0; margin: 0; }
+  .honest-list li {
+    display: grid; grid-template-columns: 80px 1fr; gap: 2.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .honest-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .honest-list .n {
+    font-family: "Fraunces", serif; font-style: italic;
+    color: var(--ink-mute); font-size: 1rem;
+  }
+  .honest-list .t {
+    font-family: "Fraunces", serif; font-size: 1.4rem; color: var(--ink);
+    font-weight: 400; letter-spacing: -0.012em; line-height: 1.25;
+  }
+  .honest-list .t small {
+    display: block; margin-top: 0.6rem;
+    font-family: "Inter", sans-serif; font-weight: 400;
+    color: var(--ink-soft); font-size: 1rem; line-height: 1.6;
+  }
+  @media (max-width: 700px) {
+    .honest-list li { grid-template-columns: 40px 1fr; gap: 1.25rem; }
+  }
+
+  /* ---------- BONUS (estuary) ---------- */
+  .bonus { background: var(--paper-deep); }
+  .bonus-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  @media (max-width: 900px) { .bonus-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .bonus-art {
+    aspect-ratio: 5/4;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    display: grid; place-items: center;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .bonus-art svg { width: 78%; }
+
+  /* ---------- COLOPHON ---------- */
+  .colophon-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 3rem;
+  }
+  @media (max-width: 900px) { .colophon-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+  .colophon h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .colophon ul { list-style: none; padding: 0; margin: 0; }
+  .colophon ul li { margin-bottom: 0.5rem; font-size: 0.92rem; color: var(--ink-soft); }
+  .colophon ul li a { border: none; }
+  .colophon ul li a:hover { color: var(--ink); }
+
+  footer.foot {
+    padding: 3rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+  }
+  footer.foot .inner {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+  }
+  footer.foot em { font-family: "Fraunces", serif; font-weight: 400; }
+
+  /* ---------- ART STYLES ---------- */
+  .line-art {
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="top">
+  <div class="inner">
+    <a href="https://seatoskytrails.com" class="mark">
+      <svg width="36" height="28" viewBox="0 0 36 28" class="line-art" aria-hidden="true">
+        <path d="M2 24 L8 14 L13 19 L19 8 L25 17 L30 12 L34 22"/>
+        <path d="M2 26 L34 26"/>
+      </svg>
+      <span class="mark-text">
+        Echo Falls &amp; the Lake Above
+        <small>An entry in the Sea to Sky Trails</small>
+      </span>
+    </a>
+    <div class="links">
+      <a href="#headliner">The Falls</a>
+      <a href="#access">Two Ways Across</a>
+      <a href="#logistics">Logistics</a>
+      <a href="#hike">The Hike</a>
+      <a href="#honest">Honest Talk</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== COORD RIBBON ===================== -->
+<div class="coords">
+  <div class="inner">
+    <span>49° 44′ N &nbsp;·&nbsp; 123° 11′ W</span>
+    <span>Vol. I &nbsp;·&nbsp; No. 02</span>
+    <span>West Bank, Squamish River</span>
+    <span>Season: Late June &mdash; Mid-September</span>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">§ Entry No. 02 &nbsp;·&nbsp; Squamish River, West Bank</span>
+
+    <div class="hero-grid">
+      <div>
+        <h1>
+          Echo Falls.
+          <em>&amp; the lake above it.</em>
+        </h1>
+        <p class="deck">
+          A long, loud waterfall halfway up the trail &mdash; and a quiet alpine pocket past it.
+          The falls are the real moment; the lake is the bonus. The catch is a tidal river
+          between you and the trailhead, and no road on the far side.
+        </p>
+
+        <div class="meta">
+          <div class="item">
+            <div class="label">Distance</div>
+            <div class="value">6 km one way</div>
+          </div>
+          <div class="item">
+            <div class="label">Elevation Gain</div>
+            <div class="value">950 m &nbsp;<em>(3,000 ft)</em></div>
+          </div>
+          <div class="item">
+            <div class="label">Time Up</div>
+            <div class="value">3 &mdash; 3½ hours</div>
+          </div>
+          <div class="item">
+            <div class="label">Difficulty</div>
+            <div class="value"><em>The Chief, twice</em></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero waterfall illustration -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 240 320" class="line-art" preserveAspectRatio="xMidYMid meet">
+          <!-- Cliff edge -->
+          <path d="M0 70 Q60 62 110 70 Q160 78 240 68"/>
+          <!-- Trees on cliff -->
+          <g transform="translate(28 32)">
+            <path d="M0 38 L0 8"/>
+            <path d="M-7 30 L0 16 L7 30"/>
+            <path d="M-5 22 L0 12 L5 22"/>
+          </g>
+          <g transform="translate(48 38)">
+            <path d="M0 32 L0 10"/>
+            <path d="M-5 24 L0 14 L5 24"/>
+          </g>
+          <g transform="translate(200 30)">
+            <path d="M0 40 L0 6"/>
+            <path d="M-7 32 L0 16 L7 32"/>
+            <path d="M-5 22 L0 10 L5 22"/>
+          </g>
+          <g transform="translate(218 38)">
+            <path d="M0 32 L0 10"/>
+            <path d="M-5 24 L0 14 L5 24"/>
+          </g>
+          <!-- Water streams -->
+          <path d="M28 70 C24 130 32 200 26 252" opacity="0.55"/>
+          <path d="M52 71 C48 140 56 215 50 258" opacity="0.7"/>
+          <path d="M76 70 C72 130 82 210 76 254"/>
+          <path d="M100 71 C96 140 106 220 100 260"/>
+          <path d="M124 70 C120 130 130 215 124 256"/>
+          <path d="M148 71 C144 140 154 220 148 258"/>
+          <path d="M172 70 C168 130 178 210 172 254" opacity="0.85"/>
+          <path d="M196 71 C192 140 202 210 196 252" opacity="0.65"/>
+          <path d="M216 70 C212 130 218 200 214 245" opacity="0.45"/>
+          <!-- Pool ripples -->
+          <path d="M20 278 Q120 290 220 278" opacity="0.7"/>
+          <path d="M40 292 Q120 300 200 292" opacity="0.5"/>
+          <path d="M60 304 Q120 310 180 304" opacity="0.35"/>
+          <!-- Tiny hiker, looking up at the falls, for scale -->
+          <g transform="translate(122 296)">
+            <circle cx="0" cy="-9" r="2"/>
+            <path d="M0 -7 L0 -1"/>
+            <path d="M-3 -4 L3 -4"/>
+            <path d="M0 -1 L-2 4 M0 -1 L2 4"/>
+          </g>
+        </svg>
+        <div class="plate">
+          <span>Pl. I</span>
+          <span>Echo Falls &mdash; from the pool</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<hr class="rule" />
+
+<!-- ===================== § I — THE HEADLINER ===================== -->
+<section id="headliner">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ I &nbsp;·&nbsp; The Headliner</span>
+      <h2>The waterfall is the point. The lake is the bonus.</h2>
+    </div>
+
+    <div class="body-grid">
+      <div class="body-art">
+        <!-- A second waterfall study: tighter, single chute -->
+        <svg viewBox="0 0 200 280" class="line-art" aria-hidden="true">
+          <path d="M20 60 Q60 55 100 60 Q140 65 180 58"/>
+          <!-- Cedars on cliff -->
+          <g transform="translate(150 22)">
+            <path d="M0 38 L0 8"/>
+            <path d="M-8 30 L0 16 L8 30"/>
+            <path d="M-6 22 L0 12 L6 22"/>
+          </g>
+          <g transform="translate(38 28)">
+            <path d="M0 32 L0 8"/>
+            <path d="M-6 24 L0 14 L6 24"/>
+          </g>
+          <!-- Streams -->
+          <path d="M45 60 C42 110 50 160 45 210" opacity="0.6"/>
+          <path d="M70 61 C66 120 76 175 70 218" opacity="0.85"/>
+          <path d="M95 60 C92 120 102 180 96 222"/>
+          <path d="M120 61 C116 120 126 180 120 220" opacity="0.85"/>
+          <path d="M148 60 C144 110 154 165 148 212" opacity="0.6"/>
+          <path d="M170 58 C166 105 174 155 170 200" opacity="0.4"/>
+          <!-- Pool -->
+          <path d="M28 238 Q100 250 172 238" opacity="0.7"/>
+          <path d="M48 252 Q100 258 152 252" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <div class="body-copy">
+        <p>
+          Almost everyone calls it the Echo Lake hike, because the trail ends at a lake. Almost
+          everyone has it backwards. The payoff is halfway up. Echo Falls drops through a chute
+          of dark Coast Mountains stone, loud enough to feel in your sternum, framed by old
+          cedar and devil&rsquo;s club. You hear it long before you see it. Stand in the spray
+          on a warm afternoon and you understand why the trail exists.
+        </p>
+        <p>
+          Echo Lake itself is another push above the falls &mdash; a quiet alpine pocket tucked
+          under the ridgeline, worth the swim if you&rsquo;ve earned it and the bugs cooperate.
+          Treat it as the appendix to the story, not the title. If your legs decide that the falls
+          are enough for one day, the trip has already paid for itself.
+        </p>
+
+        <blockquote class="pull">
+          &ldquo;The falls are the real moment. The lake is the bonus. Plan the day around the
+          waterfall and the rest of it sorts itself out.&rdquo;
+          <cite>House style, Echo Falls entry</cite>
+        </blockquote>
+
+        <p>
+          The whole route lives on the west side of the Squamish River. There is no road in,
+          no bridge nearby, no shortcut. To even reach the trailhead you have to cross moving
+          water &mdash; which is where the planning for this trip actually lives.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § II — THE CATCH ===================== -->
+<section class="catch" id="catch">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="eyebrow">§ II &nbsp;·&nbsp; The Catch</span>
+      <h2>A tidal river between you and the trailhead.</h2>
+    </div>
+
+    <div class="catch-prose">
+      <p>
+        The Echo Falls trailhead sits on the west bank of the Squamish River, downstream of town.
+        There is no bridge anywhere near it. You either paddle across in your own boat, or you
+        hire one. That is the whole problem to solve before you ever lace up.
+      </p>
+      <p>
+        The good news: the Squamish is tidal this far up. The current flips with the tide, the
+        channel is wide and slow when the water is in, and a properly timed crossing is more
+        outing than ordeal. The less-good news: the launch and the landing are both intertidal
+        mud, the water level swings by metres in a single day, and the river is real water with
+        real consequences if you treat it casually.
+      </p>
+
+      <div class="tide-row">
+        <svg width="64" height="28" viewBox="0 0 64 28" class="line-art" aria-hidden="true">
+          <path d="M2 18 Q12 8 22 18 T42 18 T62 18"/>
+          <path d="M48 10 L58 18 L48 26"/>
+          <path d="M2 22 L62 22" opacity="0.4"/>
+        </svg>
+        <span>Time the crossing for <em>high tide</em>. The river is meaningfully easier when the water is in.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § III — TWO WAYS ACROSS ===================== -->
+<section id="access">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ III &nbsp;·&nbsp; The Two Ways Across</span>
+      <h2>Paddle yourself, or take the shuttle.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">
+        Two operations, same family, same trailhead. One delivers you a canoe and lets you handle
+        the crossing yourself. The other handles the crossing for you, both ways. Pick the one
+        that fits your group, your river comfort, and how much of the day you want to spend
+        solving puzzles.
+      </p>
+    </div>
+
+    <div class="ways-grid">
+
+      <!-- Option 1: Canoe / raft -->
+      <div class="way">
+        <span class="roman">Option i.</span>
+        <div class="mark-art">
+          <!-- Paddle line art -->
+          <svg viewBox="0 0 200 70" class="line-art" aria-hidden="true">
+            <line x1="20" y1="20" x2="155" y2="20"/>
+            <path d="M155 8 Q188 20 155 32 Z"/>
+            <line x1="14" y1="14" x2="14" y2="26"/>
+            <line x1="6" y1="20" x2="22" y2="20"/>
+          </svg>
+        </div>
+        <h3>Canoe, raft, or paddleboard &mdash; delivered.</h3>
+        <span class="sub">Squamish Canoe Rental drops a vessel at the east-bank launch.</span>
+        <p>
+          The classic option, and the cheaper one. A canoe or raft is staged at the launch ready
+          to go. You paddle the channel, stash the boat in the trees on the far side, and start
+          climbing. Suits paddlers who&rsquo;ve been in a boat before and don&rsquo;t mind a bit
+          of tide math.
+        </p>
+        <ul class="spec">
+          <li><span class="lbl">Vessel</span><span class="val">Canoe, raft, or SUP</span></li>
+          <li><span class="lbl">Skill</span><span class="val">Basic paddling</span></li>
+          <li><span class="lbl">Best for</span><span class="val"><em>Self-sufficient groups</em></span></li>
+        </ul>
+        <a href="https://squamishcanoerental.com/canoe-delivery-squamish/" class="pillish moss" target="_blank" rel="noopener">Arrange a canoe delivery</a>
+      </div>
+
+      <div class="ways-divider" aria-hidden="true"></div>
+
+      <!-- Option 2: Water taxi -->
+      <div class="way">
+        <span class="roman">Option ii.</span>
+        <div class="mark-art">
+          <!-- Small water taxi line art -->
+          <svg viewBox="0 0 200 70" class="line-art" aria-hidden="true">
+            <path d="M30 50 Q100 62 170 50"/>
+            <path d="M30 50 Q100 56 170 50"/>
+            <path d="M55 50 L65 32 L130 32 L145 50"/>
+            <line x1="98" y1="32" x2="98" y2="18"/>
+            <path d="M98 18 L122 24 L98 24 Z"/>
+            <path d="M5 60 Q60 65 110 60 T195 60" opacity="0.45"/>
+          </svg>
+        </div>
+        <h3>Water taxi, both directions.</h3>
+        <span class="sub">Squamish Water Taxi runs the crossing for you &mdash; drop and pick-up.</span>
+        <p>
+          The chauffeured shuttle. They drop you at the trailhead, then collect you when you
+          radio in from the landing. No paddling, no boat to stash, no tide math, no upstream
+          slog at the end of the day. The premium option, and the right one if the crossing
+          isn&rsquo;t the part of the day you want to spend energy on.
+        </p>
+        <ul class="spec">
+          <li><span class="lbl">Round trip</span><span class="val"><em>$185</em> &mdash; up to 3</span></li>
+          <li><span class="lbl">Add&rsquo;l pax</span><span class="val">+$25 each &middot; max 6</span></li>
+          <li><span class="lbl">Dogs</span><span class="val">Welcome aboard</span></li>
+        </ul>
+        <a href="https://squamishwatertaxi.com/echo-falls.html" class="pillish" target="_blank" rel="noopener">Book the water taxi shuttle</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § IV — LOGISTICS ===================== -->
+<section class="logistics" id="logistics">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ IV &nbsp;·&nbsp; The Logistics</span>
+      <h2>Four pins, one crossing, a few hard-earned rules.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">
+        These are the actual coordinates the operators use. Open them on your phone before you
+        lose signal &mdash; there&rsquo;s no service at the trailhead and patchy service along
+        the river. After the pins, the rules of thumb that took locals years to learn.
+      </p>
+    </div>
+
+    <div class="map-list">
+
+      <div class="map-row">
+        <span class="num">i.</span>
+        <div class="title">
+          <h3>Canoe &amp; raft pickup</h3>
+          <div class="sub">Where Squamish Canoe Rental stages your boat &mdash; the east-bank launch.</div>
+        </div>
+        <a class="pinlink" href="https://maps.app.goo.gl/xUtQjFDzruToR2cP9" target="_blank" rel="noopener">Open in Maps →</a>
+        <div class="markart" aria-hidden="true">
+          <svg viewBox="0 0 100 60" class="line-art">
+            <path d="M15 38 Q50 50 85 38"/>
+            <path d="M15 38 Q50 44 85 38"/>
+            <line x1="30" y1="18" x2="65" y2="46"/>
+            <path d="M67 44 L72 52 L75 47 Z"/>
+            <circle cx="50" cy="22" r="4"/>
+            <path d="M5 50 Q50 56 95 50" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="map-row">
+        <span class="num">ii.</span>
+        <div class="title">
+          <h3>River put-in</h3>
+          <div class="sub"><em>Best to start a bit further up the river and float across.</em> The current does most of the work.</div>
+        </div>
+        <a class="pinlink" href="https://maps.app.goo.gl/zLgCSY4rgppR4vef6" target="_blank" rel="noopener">Open in Maps →</a>
+        <div class="markart" aria-hidden="true">
+          <svg viewBox="0 0 100 60" class="line-art">
+            <path d="M5 20 Q30 14 55 20 T95 20"/>
+            <path d="M5 30 Q30 24 55 30 T95 30" opacity="0.7"/>
+            <path d="M5 40 Q30 34 55 40 T95 40" opacity="0.45"/>
+            <path d="M70 14 L82 22 L70 30" opacity="0.75"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="map-row">
+        <span class="num">iii.</span>
+        <div class="title">
+          <h3>Trailhead landing (west bank)</h3>
+          <div class="sub">Where you pull out, stash the boat, and start the climb.</div>
+        </div>
+        <a class="pinlink" href="https://goo.gl/maps/9cBQvQVpuKGVoWv96" target="_blank" rel="noopener">Open in Maps →</a>
+        <div class="markart" aria-hidden="true">
+          <svg viewBox="0 0 100 60" class="line-art">
+            <path d="M5 50 L30 25 L48 40 L62 18 L82 35 L95 28"/>
+            <path d="M5 55 L95 55" opacity="0.6"/>
+            <g transform="translate(58 44)">
+              <path d="M0 8 L0 0"/>
+              <path d="M-4 4 L0 0 L4 4"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="map-row">
+        <span class="num">iv.</span>
+        <div class="title">
+          <h3>Drop-off &amp; return point</h3>
+          <div class="sub">Where the day ends. Float down to the culvert &mdash; don&rsquo;t paddle upstream.</div>
+        </div>
+        <a class="pinlink" href="https://maps.app.goo.gl/7C2KbNzcFCDPxYss5" target="_blank" rel="noopener">Open in Maps →</a>
+        <div class="markart" aria-hidden="true">
+          <svg viewBox="0 0 100 60" class="line-art">
+            <path d="M5 25 Q30 20 55 25 T95 25"/>
+            <path d="M5 35 Q30 30 55 35 T95 35" opacity="0.65"/>
+            <path d="M55 18 L40 25 L55 32" opacity="0.8"/>
+            <circle cx="78" cy="42" r="3"/>
+            <path d="M78 39 L78 32" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TIPS / CALLOUTS -->
+    <div class="tips">
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="14" viewBox="0 0 22 14" class="line-art" aria-hidden="true">
+            <path d="M2 8 Q6 2 10 8 T18 8"/>
+            <path d="M14 4 L20 8 L14 12"/>
+          </svg>
+          Tide
+        </div>
+        <p>Time the river crossing for <em>high tide</em>. The channel is wider, slower, and far more forgiving.</p>
+      </div>
+
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="22" viewBox="0 0 22 22" class="line-art" aria-hidden="true">
+            <path d="M11 4 L11 14"/>
+            <path d="M5 14 Q11 22 17 14"/>
+            <path d="M3 4 L19 4"/>
+          </svg>
+          Mooring
+        </div>
+        <p>Pull canoes and rafts <em>all the way up to the trees</em>. Intertidal water swings metres; a boat parked at the waterline at low tide will be gone at high.</p>
+      </div>
+
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="14" viewBox="0 0 22 14" class="line-art" aria-hidden="true">
+            <line x1="2" y1="7" x2="17" y2="7"/>
+            <path d="M17 3 Q21 7 17 11 Z"/>
+            <path d="M3 4 L3 10" opacity="0.5"/>
+          </svg>
+          Paddles
+        </div>
+        <p>Hide the paddles. They&rsquo;ve been stolen before. Stash them in the brush, separate from the boat, and write it down.</p>
+      </div>
+
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="14" viewBox="0 0 22 14" class="line-art" aria-hidden="true">
+            <path d="M2 7 Q11 3 20 7"/>
+            <path d="M14 3 L20 7 L14 11"/>
+          </svg>
+          Return
+        </div>
+        <p>Coming back, <em>float down</em> to the culvert at the drop-off. Don&rsquo;t paddle upstream &mdash; you&rsquo;ll lose to the current and the daylight.</p>
+      </div>
+
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="14" viewBox="0 0 22 14" class="line-art" aria-hidden="true">
+            <path d="M3 11 Q11 4 19 11"/>
+            <path d="M3 11 L19 11"/>
+            <line x1="11" y1="11" x2="11" y2="3"/>
+          </svg>
+          Raft Kit
+        </div>
+        <p>If you&rsquo;re on a raft, bring a hand pump. Slow leaks are routine, and finding out at the take-out is the worst time.</p>
+      </div>
+
+      <div class="tip">
+        <div class="tipmark">
+          <svg width="22" height="14" viewBox="0 0 22 14" class="line-art" aria-hidden="true">
+            <circle cx="6" cy="7" r="3"/>
+            <path d="M9 7 L19 7"/>
+            <path d="M16 4 L19 7 L16 10"/>
+          </svg>
+          Signal
+        </div>
+        <p>No cell service at the trailhead. Carry an offline map of the channel and tell someone your tide window before you launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § V — THE HIKE ===================== -->
+<section id="hike">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ V &nbsp;·&nbsp; The Hike</span>
+      <h2>Six kilometres up. The falls at half. The lake at the top.</h2>
+    </div>
+
+    <div class="hike-grid">
+      <div>
+        <p>
+          From the landing, the trail climbs immediately and does not really stop. Nine hundred
+          and fifty metres of gain over six kilometres puts the route firmly in serious-day-hike
+          territory. Strong hikers compare it to climbing the Stawamus Chief twice, back to back,
+          with a pack on. Most fit groups take three to three and a half hours to reach the
+          lake. Markers are in place; route-finding is not really the problem.
+        </p>
+        <p>
+          The terrain is classic coastal rainforest: root steps, mossy boulders, the occasional
+          steep dirt pitch that asks for both hands. You smell the falls before you see them.
+          Above the falls the grade eases somewhat as the trail pushes toward the lake basin,
+          and the canopy opens enough to remind you which valley you&rsquo;re in.
+        </p>
+        <p>
+          Plan the day around the tide, not the trail. Cross at the high. Climb. Eat at the
+          falls. Push up to the lake if the legs are willing. Hike down. Cross back. Be off
+          the water before the light goes.
+        </p>
+      </div>
+
+      <div class="hike-art" aria-hidden="true">
+        <!-- Trail profile / hike illustration: river → trail → falls → lake -->
+        <svg viewBox="0 0 240 300" class="line-art">
+          <!-- Lake at top -->
+          <ellipse cx="120" cy="40" rx="50" ry="14"/>
+          <path d="M70 44 Q120 52 170 44" opacity="0.5"/>
+          <!-- Ridgeline behind lake -->
+          <path d="M40 28 L75 12 L110 25 L145 8 L180 22 L210 14" opacity="0.5"/>
+          <!-- Trail dotted line from river to lake -->
+          <path d="M60 280 Q90 240 75 200 Q60 170 95 150 Q120 135 110 100 Q105 70 120 56" stroke-dasharray="3 5"/>
+          <!-- Falls indicator midway -->
+          <g transform="translate(140 145)">
+            <path d="M-18 0 Q0 -4 18 0"/>
+            <path d="M-12 0 C-14 25 -10 50 -12 70" opacity="0.7"/>
+            <path d="M0 0 C-2 25 4 55 0 75"/>
+            <path d="M12 0 C10 25 14 55 12 70" opacity="0.7"/>
+            <path d="M-16 78 Q0 84 16 78" opacity="0.6"/>
+          </g>
+          <!-- River at base -->
+          <path d="M5 282 Q60 274 120 282 T235 282"/>
+          <path d="M5 290 Q60 282 120 290 T235 290" opacity="0.5"/>
+          <!-- Canoe on water -->
+          <g transform="translate(170 282)">
+            <path d="M-16 0 Q0 5 16 0"/>
+            <path d="M-16 0 Q0 2 16 0"/>
+          </g>
+          <!-- Hiker on trail -->
+          <g transform="translate(95 215)">
+            <circle cx="0" cy="-10" r="2"/>
+            <path d="M0 -8 L0 -1"/>
+            <path d="M-3 -5 L3 -5"/>
+            <path d="M0 -1 L-2 4 M0 -1 L2 4"/>
+          </g>
+          <!-- Labels -->
+          <g font-family="Inter, sans-serif" font-size="6" font-weight="500" fill="currentColor" stroke="none" letter-spacing="0.5">
+            <text x="120" y="34" text-anchor="middle">ECHO LAKE</text>
+            <text x="180" y="145" text-anchor="start">ECHO FALLS</text>
+            <text x="120" y="298" text-anchor="middle">SQUAMISH RIVER</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § VI — WHEN TO GO ===================== -->
+<section class="when" id="when">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ VI &nbsp;·&nbsp; When To Go</span>
+      <h2>A summer window. A morning tide. A weekday if you can.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">
+        The realistic season is late June to mid-September. Outside it, snow lingers on the
+        upper trail and the falls are difficult to enjoy safely. Inside it, the deciding
+        variable is the tide chart and the day of the week.
+      </p>
+    </div>
+
+    <div class="when-grid">
+      <div class="when-item">
+        <span class="roman">i.</span>
+        <h3>Late June &mdash; July</h3>
+        <p>Snowmelt swells the falls. The pool is loud and full and cold. Bugs in the upper forest can be aggressive; bring a head net if you&rsquo;re sensitive. The river runs higher and the crossing window is more forgiving.</p>
+      </div>
+      <div class="when-item">
+        <span class="roman">ii.</span>
+        <h3>August &mdash; the sweet spot</h3>
+        <p>Stable weather, warm enough to swim at the lake, the falls still running well. Weekends busy by Sea to Sky standards but never crowded. A weekday morning with a high tide near launch is the assignment.</p>
+      </div>
+      <div class="when-item">
+        <span class="roman">iii.</span>
+        <h3>Early September</h3>
+        <p>Cool, clear, quiet. The river is at its lowest and slowest, the trail at its driest. Watch the long-range forecast: fall systems in the corridor can shut things down in twenty-four hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § VII — HONEST TALK ===================== -->
+<section id="honest">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ VII &nbsp;·&nbsp; Honest Talk</span>
+      <h2>The things that actually go wrong here.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">
+        No fearmongering, no listicles. These are the specific issues that come up on this
+        specific trip, and why each deserves a quiet line in the plan.
+      </p>
+    </div>
+
+    <ul class="honest-list">
+      <li>
+        <span class="n">i.</span>
+        <span class="t">
+          The river has current.
+          <small>The Squamish is wide and tidal in this stretch, but it is still moving water with occasional debris and a flow direction that flips with the tide. Cross at high, wear the PFD, and do not try to muscle upstream on the way home.</small>
+        </span>
+      </li>
+      <li>
+        <span class="n">ii.</span>
+        <span class="t">
+          The landings are intertidal.
+          <small>Mud, slick rock, and a water level that can move metres in a few hours. Pull the boat all the way to the treeline, tie off if you can, and do not assume the spot you launched from will look the same when you return.</small>
+        </span>
+      </li>
+      <li>
+        <span class="n">iii.</span>
+        <span class="t">
+          The trail is steep, all of it.
+          <small>950 metres of gain in 6 kilometres is not casual. The descent is harder on knees than the climb is on lungs. Trekking poles save the second half of the day.</small>
+        </span>
+      </li>
+      <li>
+        <span class="n">iv.</span>
+        <span class="t">
+          Coast Mountain weather flips fast.
+          <small>Clear morning, cold rain by mid-afternoon. Carry a shell and a warm layer even when the forecast looks perfect. The valley holds water; the upper forest stays cold.</small>
+        </span>
+      </li>
+      <li>
+        <span class="n">v.</span>
+        <span class="t">
+          Bear country, no cell service.
+          <small>Black bears live throughout this valley. Carry bear spray, make noise on the blind corners, and do not depend on a phone &mdash; there is no signal at the trailhead and very little along the trail.</small>
+        </span>
+      </li>
+      <li>
+        <span class="n">vi.</span>
+        <span class="t">
+          Rafts leak. Bring the pump.
+          <small>Slow leaks are normal across a full day in the sun. A small hand pump weighs almost nothing in a dry bag and rescues the return trip.</small>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== BONUS § — ESTUARY ===================== -->
+<section class="bonus" id="bonus">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Bonus §  &nbsp;·&nbsp; While You&rsquo;re Here</span>
+      <h2>An estuary loop, for the way out.</h2>
+    </div>
+
+    <div class="bonus-grid">
+      <div>
+        <p>
+          If you&rsquo;ve still got energy after the hike and you&rsquo;re floating back in the
+          canoe, there&rsquo;s a quiet estuary loop you can paddle on the way to the take-out.
+          Flat water, herons and eagles, the Tantalus on the horizon from a different angle.
+          It&rsquo;s a much gentler ending to the day than fighting current.
+        </p>
+        <p>
+          It also stands on its own as a paddle if the climb isn&rsquo;t on the menu &mdash;
+          worth a half-day in its own right.
+        </p>
+        <a href="https://www.google.com/maps/d/u/0/edit?mid=1LLlZNJ1nAnIFa8wFZqXqZE9FITebKcA" class="pillish moss" target="_blank" rel="noopener">Open the estuary loop map</a>
+      </div>
+
+      <div class="bonus-art" aria-hidden="true">
+        <!-- Estuary illustration: flat water, reeds, mountain in distance, bird -->
+        <svg viewBox="0 0 280 220" class="line-art">
+          <!-- Distant ridge -->
+          <path d="M10 80 L50 50 L80 70 L120 40 L160 65 L200 45 L240 70 L270 55" opacity="0.45"/>
+          <!-- Mid ridge -->
+          <path d="M0 100 L40 80 L80 95 L130 75 L180 92 L230 78 L280 92" opacity="0.65"/>
+          <!-- Waterline -->
+          <path d="M0 130 L280 130"/>
+          <!-- Reflection ripples -->
+          <path d="M10 145 Q140 152 270 145" opacity="0.5"/>
+          <path d="M10 158 Q140 164 270 158" opacity="0.35"/>
+          <path d="M10 172 Q140 178 270 172" opacity="0.22"/>
+          <!-- Reeds in foreground -->
+          <g transform="translate(30 130)">
+            <line x1="0" y1="0" x2="0" y2="-22"/>
+            <line x1="6" y1="0" x2="6" y2="-30"/>
+            <line x1="12" y1="0" x2="12" y2="-18"/>
+            <line x1="18" y1="0" x2="18" y2="-26"/>
+          </g>
+          <g transform="translate(232 130)">
+            <line x1="0" y1="0" x2="0" y2="-24"/>
+            <line x1="6" y1="0" x2="6" y2="-32"/>
+            <line x1="12" y1="0" x2="12" y2="-20"/>
+          </g>
+          <!-- Heron-ish bird on the water -->
+          <g transform="translate(150 128)">
+            <line x1="0" y1="0" x2="0" y2="-22"/>
+            <path d="M0 -22 Q2 -28 8 -28"/>
+            <path d="M8 -28 L12 -26"/>
+            <path d="M-2 0 L-2 4 M2 0 L2 4"/>
+          </g>
+          <!-- Canoe drifting -->
+          <g transform="translate(95 134)">
+            <path d="M-18 0 Q0 6 18 0"/>
+            <path d="M-18 0 Q0 3 18 0"/>
+            <line x1="-2" y1="-3" x2="-2" y2="-10"/>
+            <circle cx="-2" cy="-12" r="1.6"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== COLOPHON ===================== -->
+<section id="contact" class="colophon tight">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ Colophon &nbsp;·&nbsp; Letters &amp; Corrections</span>
+      <h2>An entry in a longer field guide.</h2>
+    </div>
+
+    <div class="colophon-grid">
+      <div>
+        <h4>The Entry</h4>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.05rem;color:var(--ink);max-width:36ch;line-height:1.5;">
+          Echo Falls &amp; the Lake Above is Entry No. 02 in the Sea to Sky Trails.
+          Written and maintained from the head of Howe Sound; corrections welcome from anyone
+          who&rsquo;s recently been across.
+        </p>
+      </div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="#headliner">The falls</a></li>
+          <li><a href="#access">Two ways across</a></li>
+          <li><a href="#logistics">Logistics &amp; pins</a></li>
+          <li><a href="#hike">The hike itself</a></li>
+          <li><a href="#honest">Honest talk</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Across</h4>
+        <ul>
+          <li><a href="https://squamishcanoerental.com/canoe-delivery-squamish/" target="_blank" rel="noopener">Squamish Canoe Rental</a></li>
+          <li><a href="https://squamishwatertaxi.com/echo-falls.html" target="_blank" rel="noopener">Squamish Water Taxi</a></li>
+          <li><a href="https://www.google.com/maps/d/u/0/edit?mid=1LLlZNJ1nAnIFa8wFZqXqZE9FITebKcA" target="_blank" rel="noopener">Estuary loop map</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere in the Guide</h4>
+        <ul>
+          <li><a href="https://seatoskytrails.com">Sea to Sky Trails ↗</a></li>
+          <li><a href="https://lakelovelywater.com">Lake Lovely Water entry</a></li>
+          <li><a href="mailto:hello@seatoskytrails.com">Correct a fact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap inner">
+    <div>
+      <em>Echo Falls &amp; the Lake Above</em> &middot; An entry in the <a href="https://seatoskytrails.com" style="border:none;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;">Sea to Sky Trails</a>. Published in Sḵwx̱wú7mesh territory.
+    </div>
+    <div>
+      &copy; 2026. Set in Fraunces &amp; Inter. Reader-funded.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
