@@ -231,15 +231,32 @@
   }
   .details-card .row .v.small { font-size: 1rem; }
 
-  /* ---------- SHUTTLE BOOKING CARD ---------- */
-  .shuttle-card { border-left: 3px solid var(--sun); background: rgba(201,143,45,0.06); }
-  .shuttle-card h3 { color: var(--pine); }
-  .shuttle-card .shuttle-copy { font-family: "Inter", sans-serif; font-size: 0.92rem; color: var(--ink-soft); margin: 0 0 1rem; line-height: 1.5; }
-  .shuttle-card .shuttle-price { font-family: "Fraunces", serif; font-size: 1.4rem; font-weight: 500; color: var(--ink); margin-bottom: 1.1rem; letter-spacing: -0.01em; }
-  .shuttle-card .shuttle-price span { font-family: "Inter", sans-serif; font-size: 0.78rem; color: var(--mute); font-weight: 500; display: block; margin-top: 0.2rem; letter-spacing: 0.02em; }
-  .shuttle-card a.shuttle-cta {
-    display: block; text-align: center;
-    padding: 0.9rem 1.3rem;
+  /* ---------- SHUTTLE BOOKING BANNER ---------- */
+  .shuttle-banner {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(201,143,45,0.08);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--sun);
+    border-radius: 12px;
+  }
+  .shuttle-banner .shuttle-text h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 600; color: var(--pine);
+    margin: 0 0 0.35rem;
+  }
+  .shuttle-banner .shuttle-text p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+  .shuttle-banner .shuttle-text strong { color: var(--ink); font-weight: 600; }
+  .shuttle-banner a.shuttle-cta {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
     background: var(--pine);
     font-family: "Inter", sans-serif;
     font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
@@ -247,7 +264,7 @@
     border-radius: 999px;
     transition: background 0.2s;
   }
-  .shuttle-card a.shuttle-cta:hover { background: var(--pine-deep); }
+  .shuttle-banner a.shuttle-cta:hover { background: var(--pine-deep); }
 
   /* ---------- OVERVIEW DESCRIPTION ---------- */
   section.overview { padding: 2.5rem 0 4rem; }
@@ -568,13 +585,6 @@
 
     <!-- RIGHT: trail details panel -->
     <div class="hero-details">
-      <div class="details-card shuttle-card">
-        <h3>Skip the Paddle</h3>
-        <p class="shuttle-copy">The Squamish Water Taxi drops you at the trailhead and picks you up after &mdash; no canoe, no tide-timing, no gear to haul back.</p>
-        <div class="shuttle-price">$185 round trip <span>Up to 3 people &middot; dogs welcome</span></div>
-        <a href="https://rentedlocal.com/gear/echo-lake-shuttle-squamish-bc--6a8f3e31315ec77538e40e6e" target="_blank" rel="noopener" class="shuttle-cta">Book the Shuttle &rarr;</a>
-      </div>
-
       <div class="details-card">
         <h3>Trail Details</h3>
 
@@ -660,6 +670,15 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- ===================== SHUTTLE BANNER ===================== -->
+  <div class="shuttle-banner">
+    <div class="shuttle-text">
+      <h3>Skip the Paddle</h3>
+      <p>The Squamish Water Taxi drops you at the trailhead and picks you up after. <strong>$225/day, shuttles you + 3 people.</strong></p>
+    </div>
+    <a href="https://rentedlocal.com/gear/echo-lake-shuttle-squamish-bc--6a8f3e31315ec77538e40e6e" target="_blank" rel="noopener" class="shuttle-cta">Book the Shuttle &rarr;</a>
   </div>
 
 </div>
@@ -889,7 +908,7 @@
 
     <div class="closure-note">
       <strong>Field Note &middot; while you&rsquo;re booked with them</strong>
-      The same operator, <a href="https://squamishwatertaxi.com/" target="_blank" rel="noopener">Squamish Water Taxi</a>, also runs <a href="https://squamishwatertaxi.com/tours.html" target="_blank" rel="noopener">wildlife tours on Howe Sound</a> &mdash; guided, from $375 for up to three guests &mdash; and offers a <a href="https://squamishwatertaxi.com/boat-rentals.html" target="_blank" rel="noopener">Squamish boat rental</a> if you want a self-skippered day on the Sound to recover from the climb. Shuttle pricing is $185 round trip for up to three, $25 per extra person, max six, dogs welcome.
+      The same operator, <a href="https://squamishwatertaxi.com/" target="_blank" rel="noopener">Squamish Water Taxi</a>, also runs <a href="https://squamishwatertaxi.com/tours.html" target="_blank" rel="noopener">wildlife tours on Howe Sound</a> &mdash; guided, from $375 for up to three guests &mdash; and offers a <a href="https://squamishwatertaxi.com/boat-rentals.html" target="_blank" rel="noopener">Squamish boat rental</a> if you want a self-skippered day on the Sound to recover from the climb. The Echo Lake shuttle itself runs $225/day and takes you plus up to three others &mdash; <a href="https://rentedlocal.com/gear/echo-lake-shuttle-squamish-bc--6a8f3e31315ec77538e40e6e" target="_blank" rel="noopener">book it on Rented Local</a>.
     </div>
   </div>
 </section>
